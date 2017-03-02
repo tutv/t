@@ -49,15 +49,6 @@ if( !function_exists('gdlr_register_required_plugins') ){
 				'force_activation' 		=> false,
 				'force_deactivation' 	=> true, 
 			),
-			array(
-				'name'     				=> 'Goodlayers Hostel',
-				'slug'     				=> 'gdlr-hostel', 
-				'version'               => '2.0.6',
-				'source'   				=> GDLR_LOCAL_PATH . '/include/plugin/plugins/gdlr-hostel.zip',
-				'required' 				=> true,
-				'force_activation' 		=> false,
-				'force_deactivation' 	=> true, 
-			),
 			
 			array('name' => 'Contact Form 7', 'slug' => 'contact-form-7', 'required' => true),
 			array('name' => 'Wp Google Maps', 'slug' => 'wp-google-map-plugin', 'required' => false),
