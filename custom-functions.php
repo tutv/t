@@ -9,7 +9,7 @@ add_filter( 'rwmb_meta_boxes', 'max_register_meta_boxes' );
 function max_register_meta_boxes( $meta_boxes ) {
 	global $google_map_api;
 
-	$prefix = 'rw_';
+	$prefix = 'tennis_course_';
 	// 1st meta box
 	$meta_boxes[] = array(
 		'id'         => 'personal',
