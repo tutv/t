@@ -1426,3 +1426,8 @@ only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device
 	.gdlr-hotel-availability input.gdlr-datepicker:focus,
 	select:focus, textarea:focus, input:focus { font-size: 16px; }
 }
+
+#toplevel_page_hotelmaster,
+#toplevel_page_hotel_option {
+	display: none;
+}
