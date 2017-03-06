@@ -1,4 +1,8 @@
 #toplevel_page_hotelmaster,
-#toplevel_page_hotel_option {
+#toplevel_page_hotel_option,
+#menu-posts-service,
+#menu-posts-coupon,
+#toplevel_page_mo_openid_settings
+{
     display: none;
 }
