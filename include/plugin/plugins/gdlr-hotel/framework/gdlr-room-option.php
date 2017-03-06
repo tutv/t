@@ -17,7 +17,7 @@ if ( ! function_exists( 'gdlr_create_room' ) ) {
 			$room_category_slug = $theme_option['room-category-slug'];
 			$room_tag_slug      = $theme_option['room-tag-slug'];
 		} else {
-			$room_slug          = 'room';
+			$room_slug          = 'court';
 			$room_category_slug = 'room_category';
 			$room_tag_slug      = 'room_tag';
 		}
@@ -25,19 +25,19 @@ if ( ! function_exists( 'gdlr_create_room' ) ) {
 		register_post_type( 'room',
 			array(
 				'labels'             => array(
-					'name'               => __( 'Tennis Course', 'gdlr-hotel' ),
-					'singular_name'      => __( 'Tennis Course', 'gdlr-hotel' ),
+					'name'               => __( 'Tennis Court', 'gdlr-hotel' ),
+					'singular_name'      => __( 'Tennis Court', 'gdlr-hotel' ),
 					'add_new'            => __( 'Add New', 'gdlr-hotel' ),
-					'add_new_item'       => __( 'Add New Tennis Course', 'gdlr-hotel' ),
-					'edit_item'          => __( 'Edit Tennis Course', 'gdlr-hotel' ),
-					'new_item'           => __( 'New Tennis Course', 'gdlr-hotel' ),
-					'all_items'          => __( 'All Tennis Courses', 'gdlr-hotel' ),
-					'view_item'          => __( 'View Tennis Course', 'gdlr-hotel' ),
-					'search_items'       => __( 'Search Tennis Course', 'gdlr-hotel' ),
-					'not_found'          => __( 'No tennis course found', 'gdlr-hotel' ),
-					'not_found_in_trash' => __( 'No tennis course found in Trash', 'gdlr-hotel' ),
+					'add_new_item'       => __( 'Add New Tennis Court', 'gdlr-hotel' ),
+					'edit_item'          => __( 'Edit Tennis Court', 'gdlr-hotel' ),
+					'new_item'           => __( 'New Tennis Court', 'gdlr-hotel' ),
+					'all_items'          => __( 'All Tennis Courts', 'gdlr-hotel' ),
+					'view_item'          => __( 'View Tennis Court', 'gdlr-hotel' ),
+					'search_items'       => __( 'Search Tennis Court', 'gdlr-hotel' ),
+					'not_found'          => __( 'No Tennis Court found', 'gdlr-hotel' ),
+					'not_found_in_trash' => __( 'No Tennis Court found in Trash', 'gdlr-hotel' ),
 					'parent_item_colon'  => '',
-					'menu_name'          => __( 'Tennis Course', 'gdlr-hotel' )
+					'menu_name'          => __( 'Tennis Court', 'gdlr-hotel' )
 				),
 				'public'             => true,
 				'publicly_queryable' => true,
@@ -58,8 +58,8 @@ if ( ! function_exists( 'gdlr_create_room' ) ) {
 			'room_category', array( "room" ), array(
 			'hierarchical'      => true,
 			'show_admin_column' => true,
-			'label'             => __( 'Tennis Course Categories', 'gdlr-hotel' ),
-			'singular_label'    => __( 'Tennis Course Category', 'gdlr-hotel' ),
+			'label'             => __( 'Tennis Court Categories', 'gdlr-hotel' ),
+			'singular_label'    => __( 'Tennis Court Category', 'gdlr-hotel' ),
 			'rewrite'           => array( 'slug' => $room_category_slug )
 		) );
 		register_taxonomy_for_object_type( 'room_category', 'room' );
@@ -75,11 +75,11 @@ if ( ! function_exists( 'gdlr_create_room' ) ) {
 				),
 				array(
 					'upload'  => array(
-						'title' => __( 'Tennis Course Thumbnail', 'gdlr-song' ),
+						'title' => __( 'Tennis Court Thumbnail', 'gdlr-song' ),
 						'type'  => 'upload'
 					),
 					'content' => array(
-						'title' => __( 'Tennis Course Location', 'gdlr-song' ),
+						'title' => __( 'Tennis Court Location', 'gdlr-song' ),
 						'type'  => 'textarea'
 					)
 				)
@@ -92,8 +92,8 @@ if ( ! function_exists( 'gdlr_create_room' ) ) {
 			'room_tag', array( 'room' ), array(
 			'hierarchical'      => false,
 			'show_admin_column' => true,
-			'label'             => __( 'Tennis Course Tags', 'gdlr-hotel' ),
-			'singular_label'    => __( 'Tennis Course Tag', 'gdlr-hotel' ),
+			'label'             => __( 'Tennis Court Tags', 'gdlr-hotel' ),
+			'singular_label'    => __( 'Tennis Court Tag', 'gdlr-hotel' ),
 			'rewrite'           => array( 'slug' => $room_tag_slug )
 		) );
 		register_taxonomy_for_object_type( 'room_tag', 'room' );
@@ -131,7 +131,7 @@ if ( ! function_exists( 'gdlr_create_room_options' ) ) {
 		// page option attribute
 			array(
 				'post_type'   => array( 'room' ),
-				'meta_title'  => __( 'Tennis Course Option', 'gdlr-hotel' ),
+				'meta_title'  => __( 'Tennis Court Option', 'gdlr-hotel' ),
 				'meta_slug'   => 'goodlayers-page-option',
 				'option_name' => 'post-option',
 				'position'    => 'normal',
@@ -141,7 +141,7 @@ if ( ! function_exists( 'gdlr_create_room_options' ) ) {
 			// page option settings
 			array(
 				'page-option' => array(
-					'title'   => __( 'Tennis Course Options', 'gdlr-hotel' ),
+					'title'   => __( 'Tennis Court Options', 'gdlr-hotel' ),
 					'options' => array(
 						'facilities-and-services' => array(
 							'title'         => __( 'Add Facilities and Services', 'gdlr-hotel' ),
