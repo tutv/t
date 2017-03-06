@@ -6,15 +6,6 @@ if( !function_exists('gdlr_register_required_plugins') ){
 	function gdlr_register_required_plugins(){
 		$plugins = array(
 			array(
-				'name'     				=> 'masterslider',
-				'slug'     				=> 'masterslider', 
-				'source'   				=> GDLR_LOCAL_PATH . '/include/plugin/plugins/masterslider.zip',
-				'version'               => '2.29.0',
-				'required' 				=> true,
-				'force_activation' 		=> false,
-				'force_deactivation' 	=> true, 
-			),
-			array(
 				'name'     				=> 'Goodlayers Importer',
 				'slug'     				=> 'goodlayers-importer', 
 				'source'   				=> GDLR_LOCAL_PATH . '/include/plugin/plugins/goodlayers-importer.zip',
@@ -31,15 +22,7 @@ if( !function_exists('gdlr_register_required_plugins') ){
 				'force_activation' 		=> false,
 				'force_deactivation' 	=> false, 
 			),
-			array(
-				'name'     				=> 'Goodlayers Portfolio',
-				'slug'     				=> 'gdlr-portfolio', 
-				'version'               => '1.0.0',
-				'source'   				=> GDLR_LOCAL_PATH . '/include/plugin/plugins/gdlr-portfolio.zip',
-				'required' 				=> true,
-				'force_activation' 		=> false,
-				'force_deactivation' 	=> false, 
-			),
+
 			array(
 				'name'     				=> 'Goodlayers Hotel',
 				'slug'     				=> 'gdlr-hotel', 
@@ -49,9 +32,6 @@ if( !function_exists('gdlr_register_required_plugins') ){
 				'force_activation' 		=> false,
 				'force_deactivation' 	=> true, 
 			),
-			
-			array('name' => 'Contact Form 7', 'slug' => 'contact-form-7', 'required' => true),
-			array('name' => 'Wp Google Maps', 'slug' => 'wp-google-map-plugin', 'required' => false),
 
 		);
 
