@@ -138,7 +138,7 @@ function max_room_price_detail( $array ) {
 		$start  = $price[ $prefix . 'time_start' ];
 		$finish = $price[ $prefix . 'time_finish' ];
 		$price  = $price[ $prefix . 'time_price' ];
-		$price = money_format('%i (đ)', $price);
+		$price  = money_format( '%i (đ)', $price );
 
 		echo "<tr>
 				<td>$start</td>
@@ -149,3 +149,9 @@ function max_room_price_detail( $array ) {
 	echo "</tbody>";
 	echo "</table>";
 }
+
+function max_add_admin_css() {
+	wp_enqueue_style( 'max-admin', get_template_directory_uri() . '/admin.css', array() );
+}
+
+add_action('admin_enqueue_scripts', 'max_add_admin_css');
