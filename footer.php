@@ -38,7 +38,7 @@
 		<div class="copyright-wrapper">
 			<div class="copyright-container container">
 				<div class="copyright-left">
-					<?php if( !empty($theme_option['copyright-left-text']) ) echo gdlr_text_filter(gdlr_escape_string($theme_option['copyright-left-text'])); ?>
+					<?php //if( !empty($theme_option['copyright-left-text']) ) echo gdlr_text_filter(gdlr_escape_string($theme_option['copyright-left-text'])); ?>
 				</div>
 				<div class="copyright-right">
 					<?php if( !empty($theme_option['copyright-right-text']) ) echo gdlr_text_filter(gdlr_escape_string($theme_option['copyright-right-text'])); ?>
