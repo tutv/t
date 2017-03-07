@@ -125,7 +125,7 @@
 			$title = __('Shop', 'gdlr_translate');
 			$caption = '';
 		}else if( is_post_type_archive('room') || is_post_type_archive('hotel_room') ){
-			$title = __('Our Best Rooms', 'gdlr_translate');
+			$title = __('Our Best Tennis Courts', 'gdlr_translate');
 			$caption = '';
 		}else{
 			$title = get_the_title();

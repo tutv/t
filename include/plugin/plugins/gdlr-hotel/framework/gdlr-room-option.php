@@ -169,7 +169,7 @@ if ( ! function_exists( 'gdlr_create_room_options' ) ) {
 							'wrapper-class' => 'slider-wrapper thumbnail-type-wrapper'
 						),
 						'inside-thumbnail-type'   => array(
-							'title'         => __( 'Inside Room Thumbnail Type', 'gdlr-hotel' ),
+							'title'         => __( 'Inside Court Thumbnail Type', 'gdlr-hotel' ),
 							'type'          => 'combobox',
 							'options'       => array(
 								'thumbnail-type' => __( 'Same As Thumbnail Type', 'gdlr-hotel' ),
