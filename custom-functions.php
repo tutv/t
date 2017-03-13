@@ -100,7 +100,7 @@ function max_room_price( $post ) {
 	$map          = get_post_meta( $postID, $prefix . 'map', true );
 	$address_text = get_post_meta( $postID, $prefix . 'address', true );
 
-	$group_value = rwmb_meta( $prefix . 'fname', array(), $postID );
+//	$group_value = rwmb_meta( $prefix . 'fname', array(), $postID );
 
 	echo "<div class='container'>";
 
@@ -108,9 +108,9 @@ function max_room_price( $post ) {
 	max_get_image_map( $map, $address_text );
 	echo "</div>";
 
-	echo "<div class='columns six'>";
-	max_room_price_detail( $group_value );
-	echo "</div>";
+//	echo "<div class='columns six'>";
+//	max_room_price_detail( $group_value );
+//	echo "</div>";
 
 	echo "</div>";
 

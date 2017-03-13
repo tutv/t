@@ -10,7 +10,7 @@
 			$ret  = '<form class="gdlr-reservation-bar" id="gdlr-reservation-bar" data-action="gdlr_hotel_booking" ';
 			$ret .= ($single_form)? 'method="post" action="' . esc_url(add_query_arg(array($hotel_option['booking-slug']=>''), home_url('/'))) . '" ': '';
 			$ret .= ' >';
-			$ret .= '<div class="gdlr-reservation-bar-title">' . __('Your Reservation', 'gdlr-hotel') . '</div>';
+			$ret .= '<div class="gdlr-reservation-bar-title">' . __('Search Tennis Court', 'gdlr-hotel') . '</div>';
 			
 			if( !empty($_GET['state']) && $_GET['state'] == 4 && !empty($_GET['invoice']) ){
 				global $wpdb;
@@ -27,9 +27,9 @@
 				$ret .= '<div class="gdlr-reservation-bar-summary-form" id="gdlr-reservation-bar-summary-form"></div>';
 				
 				if( !empty($_POST['hotel_data']) ){
-					$ret .= '<div class="gdlr-reservation-bar-room-form gdlr-active" id="gdlr-reservation-bar-room-form" style="display: block;">';
-					$ret .= gdlr_get_reservation_room_form($_POST, 0);
-					$ret .= '</div>';
+//					$ret .= '<div class="gdlr-reservation-bar-room-form gdlr-active" id="gdlr-reservation-bar-room-form" style="display: block;">';
+//					$ret .= gdlr_get_reservation_room_form($_POST, 0);
+//					$ret .= '</div>';
 				}else{
 					$ret .= '<div class="gdlr-reservation-bar-room-form" id="gdlr-reservation-bar-room-form"></div>';
 				}
@@ -332,21 +332,21 @@
 			
 			// date
 			$ret .= gdlr_get_reservation_datepicker(array(
-				'title'=>__('Check In', 'gdlr-hotel'),
+				'title'=>__('Check In Date', 'gdlr-hotel'),
 				'slug'=>'gdlr-check-in',
 				'id'=>'gdlr-check-in',
 				'value'=>$value['gdlr-check-in']
 			));
-			$ret .= gdlr_get_reservation_combobox(array(
-				'title'=>__('Night', 'gdlr-hotel'),
-				'slug'=>'gdlr-night',
-				'id'=>'gdlr-night',
-				'value'=>$value['gdlr-night']
-			), 1);
-			$ret .= '<div class="clear"></div>';
+//			$ret .= gdlr_get_reservation_combobox(array(
+//				'title'=>__('Night', 'gdlr-hotel'),
+//				'slug'=>'gdlr-night',
+//				'id'=>'gdlr-night',
+//				'value'=>$value['gdlr-night']
+//			), 1);
+//			$ret .= '<div class="clear"></div>';
 
 			$ret .= gdlr_get_reservation_datepicker(array(
-				'title'=>__('Check Out', 'gdlr-hotel'),
+				'title'=>__('Check In Time', 'gdlr-hotel'),
 				'slug'=>'gdlr-check-out',
 				'id'=>'gdlr-check-out',
 				'value'=>$value['gdlr-check-out']
@@ -355,33 +355,33 @@
 			
 			// room
 			$ret .= gdlr_get_reservation_combobox(array(
-				'title'=>__('Rooms', 'gdlr-hotel'),
+				'title'=>__('Tennis Court', 'gdlr-hotel'),
 				'slug'=>'gdlr-room-number',
 				'id'=>'gdlr-room-number',
 				'value'=>$value['gdlr-room-number']
 			), 1);
 			$ret .= '<div class="clear"></div>';
 			$ret .= '<div class="gdlr-reservation-people-amount-wrapper" id="gdlr-reservation-people-amount-wrapper" >';
-			for($i=0; $i<$value['gdlr-room-number']; $i++){	
-				$ret .= '<div class="gdlr-reservation-people-amount">';
-				$ret .= '<div class="gdlr-reservation-people-title" >' . __('Room', 'gdlr-hotel') .  ' <span>' . ($i+1) . '</span></div>';
-				$ret .= gdlr_get_reservation_combobox(array(
-					'title'=>__('Adults', 'gdlr-hotel'),
-					'slug'=>'gdlr-adult-number',
-					'id'=>'',
-					'value'=>$value['gdlr-adult-number'][$i],
-					'multiple'=>true
-				), 1);
-				$ret .= gdlr_get_reservation_combobox(array(
-					'title'=>__('Children', 'gdlr-hotel'),
-					'slug'=>'gdlr-children-number',
-					'id'=>'',
-					'value'=>$value['gdlr-children-number'][$i],
-					'multiple'=>true
-				));
-				$ret .= '<div class="clear"></div>';
-				$ret .= '</div>';
-			}
+//			for($i=0; $i<$value['gdlr-room-number']; $i++){
+//				$ret .= '<div class="gdlr-reservation-people-amount">';
+//				$ret .= '<div class="gdlr-reservation-people-title" >' . __('Room', 'gdlr-hotel') .  ' <span>' . ($i+1) . '</span></div>';
+//				$ret .= gdlr_get_reservation_combobox(array(
+//					'title'=>__('Adults', 'gdlr-hotel'),
+//					'slug'=>'gdlr-adult-number',
+//					'id'=>'',
+//					'value'=>$value['gdlr-adult-number'][$i],
+//					'multiple'=>true
+//				), 1);
+//				$ret .= gdlr_get_reservation_combobox(array(
+//					'title'=>__('Children', 'gdlr-hotel'),
+//					'slug'=>'gdlr-children-number',
+//					'id'=>'',
+//					'value'=>$value['gdlr-children-number'][$i],
+//					'multiple'=>true
+//				));
+//				$ret .= '<div class="clear"></div>';
+//				$ret .= '</div>';
+//			}
 			$ret .= '</div>'; // gdlr-reservation-people-amount-wrapper
 			$ret .= '<div class="clear"></div>';
 			

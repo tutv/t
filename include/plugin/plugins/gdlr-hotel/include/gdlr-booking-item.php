@@ -7,8 +7,8 @@
 		function gdlr_booking_process_bar( $state = 1 ){
 			$ret  = '<div class="gdlr-booking-process-bar" id="gdlr-booking-process-bar" data-state="' . $state . '" >';
 			$ret .= '<div data-process="1" class="gdlr-booking-process ' . (($state==1)? 'gdlr-active': '') . '">' . __('1. Choose Date', 'gdlr-hotel') . '</div>';
-			$ret .= '<div data-process="2" class="gdlr-booking-process ' . (($state==2)? 'gdlr-active': '') . '">' . __('2. Choose Room', 'gdlr-hotel') . '</div>';
-			$ret .= '<div data-process="3" class="gdlr-booking-process ' . (($state==3)? 'gdlr-active': '') . '">' . __('3. Make a Reservation', 'gdlr-hotel') . '</div>';
+			$ret .= '<div data-process="2" class="gdlr-booking-process ' . (($state==2)? 'gdlr-active': '') . '">' . __('2. Choose Tennis Court', 'gdlr-hotel') . '</div>';
+			$ret .= '<div data-process="3" class="gdlr-booking-process ' . (($state==3)? 'gdlr-active': '') . '">' . __('3. Make a Booking', 'gdlr-hotel') . '</div>';
 			$ret .= '<div data-process="4" class="gdlr-booking-process ' . (($state==4)? 'gdlr-active': '') . '">' . __('4. Confirmation', 'gdlr-hotel') . '</div>';
 			$ret .= '</div>';
 			return $ret;
@@ -346,10 +346,10 @@
 				$ret  = '<div class="gdlr-hotel-missing-room">';
 				$ret .= '<i class="fa fa-frown-o icon-frown"></i>';
 				if( !empty($no_room_text) ){
-					$ret .= __('Sorry, there\'re no room available in these following dates :', 'gdlr-hotel');
+					$ret .= __('Sorry, there\'re no tennis court available in these following dates :', 'gdlr-hotel');
 					$ret .= '<br><strong>' . $no_room_text . '</strong>'; 
 				}else{
-					$ret .= __('Sorry, there\'re no room available within selected dates.', 'gdlr-hotel');
+					$ret .= __('Sorry, there\'re no tennis court available within selected dates.', 'gdlr-hotel');
 				}
 				$ret .= '</div>';
 				

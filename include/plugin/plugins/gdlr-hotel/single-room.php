@@ -24,7 +24,7 @@ while ( have_posts() ) {
                     <div class="with-sidebar-content <?php echo $gdlr_sidebar['center']; ?> columns">
                         <div class="gdlr-item gdlr-item-start-content">
                             <div id="room-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<?php //echo gdlr_get_reservation_bar( true ); ?>
+								<?php echo gdlr_get_reservation_bar( true ); ?>
 
                                 <div class="gdlr-room-main-content">
                                     <div class="gdlr-room-thumbnail gdlr-single-room-thumbnail">
